@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# No sitemap file yet
