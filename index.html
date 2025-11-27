@@ -53,8 +53,9 @@
     }
 
     .logo {
-      width: 420px;
-      height: 420px;
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 1;
       border-radius: 50%;
       background: transparent;
       display: flex;
@@ -159,6 +160,10 @@
     @media (max-width: 640px) {
       .shell {
         padding: 2rem 1.4rem 1.6rem;
+      }
+
+      .logo {
+        max-width: 280px;
       }
 
       .heading h1 {
