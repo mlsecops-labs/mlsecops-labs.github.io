@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MLSecOps Labs</title>
+  <title>Richard Spicer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="Richard Spicer - Security engineer learning ML security through hands-on lab work.">
   <style>
     :root {
       --bg: #fafafa;
@@ -42,45 +42,63 @@
       color: var(--text-dark);
     }
     
-    .subtitle {
+    .title {
       color: var(--text-muted);
       margin-bottom: 2rem;
       font-size: 1rem;
     }
     
-    .description {
-      margin-bottom: 2.5rem;
+    .bio {
+      margin-bottom: 2rem;
       color: var(--text);
     }
     
+    .certs {
+      margin-bottom: 2rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem;
+      color: var(--text-dark);
+    }
+    
     .links {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
     
-    .link-item {
-      margin-bottom: 1.2rem;
-    }
-    
-    .link-item a {
+    .links a {
+      display: block;
+      margin: 0.5rem 0;
       color: var(--link);
       text-decoration: none;
-      font-weight: 500;
     }
     
-    .link-item a:hover {
+    .links a:hover {
       text-decoration: underline;
     }
     
-    .link-item .desc {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-left: 0.3rem;
+    .contact {
+      margin-bottom: 2rem;
+    }
+    
+    .contact a {
+      color: var(--link);
+      text-decoration: none;
+      margin-right: 1rem;
+    }
+    
+    .contact a:hover {
+      text-decoration: underline;
     }
     
     .note {
       font-size: 0.85rem;
       color: var(--text-muted);
-      margin-bottom: 2rem;
+      margin: 2rem 0;
     }
     
     .theme-toggle {
@@ -135,29 +153,27 @@
     <span id="themeIcon">☀️</span>
   </button>
 
-  <h1>MLSecOps Labs</h1>
-  <div class="subtitle">Applied Machine Learning Security</div>
+  <h1>Richard Spicer</h1>
+  <div class="title">Security Engineer</div>
   
-  <div class="description">
-    Security engineer learning ML security through hands-on lab work.
-    Documentation of attacks, defenses, and monitoring patterns tested in a private lab.
+  <div class="bio">
+    Security engineer with infrastructure and enterprise security experience. Currently learning ML security through hands-on lab work and documenting findings publicly.
   </div>
   
+  <div class="certs">CISSP • GCIH • GSEC</div>
+  
+  <h2>Projects</h2>
   <div class="links">
-    <div class="link-item">
-      <a href="https://github.com/mlsecops-labs/field-manual">Field Manual</a>
-      <span class="desc">Docs and patterns</span>
-    </div>
-    
-    <div class="link-item">
-      <a href="https://github.com/mlsecops-labs/modules">Modules</a>
-      <span class="desc">Reproducible demonstrations</span>
-    </div>
-    
-    <div class="link-item">
-      <a href="https://github.com/mlsecops-labs">GitHub</a>
-      <span class="desc">All repositories</span>
-    </div>
+    <a href="https://mlsecopslabs.io">MLSecOps Labs</a>
+    <a href="https://mlsecops.fm">Field Manual</a>
+    <a href="https://github.com/mlsecops-labs">GitHub</a>
+  </div>
+  
+  <h2>Contact</h2>
+  <div class="contact">
+    <a href="mailto:contact@richardspicer.io">Email</a>
+    <a href="https://github.com/richardspicer">GitHub</a>
+    <a href="https://www.linkedin.com/in/richard-spicer-07371212/">LinkedIn</a>
   </div>
   
   <div class="note">
@@ -165,12 +181,11 @@
   </div>
   
   <footer>
-    <div>Richard Spicer</div>
+    <div>© 2025 Richard Spicer</div>
     <div class="motto">Vigilis in Machina</div>
   </footer>
 
   <script>
-    // Check for saved theme preference or default to system preference
     const getTheme = () => {
       const saved = localStorage.getItem('theme');
       if (saved) return saved;
@@ -183,10 +198,8 @@
       localStorage.setItem('theme', theme);
     };
 
-    // Initialize theme
     setTheme(getTheme());
 
-    // Toggle theme on button click
     document.getElementById('themeToggle').addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme');
       setTheme(current === 'dark' ? 'light' : 'dark');
