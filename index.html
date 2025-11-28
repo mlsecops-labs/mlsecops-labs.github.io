@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Richard Spicer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+  <title>MLSecOps Labs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Richard Spicer - Security engineer learning ML security through hands-on lab work.">
+  <meta name="description" content="MLSecOps Labs - Hands-on ML security research and documentation">
   <style>
     :root {
       --bg: #fafafa;
@@ -25,8 +28,9 @@
     }
     
     body {
-      max-width: 700px;
-      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 60px 20px;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       line-height: 1.6;
@@ -35,28 +39,34 @@
       transition: background 0.2s ease, color 0.2s ease;
     }
     
+    .container {
+      max-width: 700px;
+      width: 100%;
+      padding: 40px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    
     h1 {
       font-size: 1.8rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
       color: var(--text-dark);
+      text-align: center;
     }
     
-    .title {
+    .subtitle {
       color: var(--text-muted);
       margin-bottom: 2rem;
       font-size: 1rem;
+      text-align: center;
     }
     
-    .bio {
+    .description {
       margin-bottom: 2rem;
       color: var(--text);
-    }
-    
-    .certs {
-      margin-bottom: 2rem;
-      color: var(--text-muted);
-      font-size: 0.95rem;
+      text-align: center;
     }
     
     h2 {
@@ -64,15 +74,17 @@
       font-weight: 600;
       margin: 2rem 0 1rem;
       color: var(--text-dark);
+      text-align: center;
     }
     
     .links {
       margin-bottom: 2rem;
+      text-align: center;
     }
     
     .links a {
-      display: block;
-      margin: 0.5rem 0;
+      display: inline-block;
+      margin: 0.5rem 0.75rem;
       color: var(--link);
       text-decoration: none;
     }
@@ -81,24 +93,11 @@
       text-decoration: underline;
     }
     
-    .contact {
-      margin-bottom: 2rem;
-    }
-    
-    .contact a {
-      color: var(--link);
-      text-decoration: none;
-      margin-right: 1rem;
-    }
-    
-    .contact a:hover {
-      text-decoration: underline;
-    }
-    
     .note {
       font-size: 0.85rem;
       color: var(--text-muted);
       margin: 2rem 0;
+      text-align: center;
     }
     
     .theme-toggle {
@@ -125,9 +124,11 @@
       border-top: 1px solid var(--border);
       font-size: 0.9rem;
       color: var(--text-muted);
+      text-align: center;
     }
     
     footer .motto {
+      font-family: 'Cinzel', serif;
       font-style: italic;
       margin-top: 0.3rem;
     }
@@ -153,37 +154,31 @@
     <span id="themeIcon">☀️</span>
   </button>
 
-  <h1>Richard Spicer</h1>
-  <div class="title">Security Engineer</div>
-  
-  <div class="bio">
-    Security engineer with infrastructure and enterprise security experience. Currently learning ML security through hands-on lab work and documenting findings publicly.
+  <div class="container">
+    <h1>MLSecOps Labs</h1>
+    <div class="subtitle">Hands-on ML Security Research</div>
+    
+    <div class="description">
+      Security engineer learning ML security through hands-on lab work.<br>
+      Documenting attacks, defenses, and detection patterns publicly.
+    </div>
+    
+    <h2>Resources</h2>
+    <div class="links">
+      <a href="https://mlsecops.fm">Field Manual</a>
+      <a href="https://github.com/mlsecops-labs/modules">Modules</a>
+      <a href="https://github.com/mlsecops-labs">GitHub</a>
+    </div>
+    
+    <div class="note">
+      This work uses AI tools for assistance. All lab experiments and decisions are human-led.
+    </div>
+    
+    <footer>
+      <div>Richard Spicer</div>
+      <div class="motto">Vigilis in Machina</div>
+    </footer>
   </div>
-  
-  <div class="certs">CISSP • GCIH • GSEC</div>
-  
-  <h2>Projects</h2>
-  <div class="links">
-    <a href="https://mlsecopslabs.io">MLSecOps Labs</a>
-    <a href="https://mlsecops.fm">Field Manual</a>
-    <a href="https://github.com/mlsecops-labs">GitHub</a>
-  </div>
-  
-  <h2>Contact</h2>
-  <div class="contact">
-    <a href="mailto:contact@richardspicer.io">Email</a>
-    <a href="https://github.com/richardspicer">GitHub</a>
-    <a href="https://www.linkedin.com/in/richard-spicer-07371212/">LinkedIn</a>
-  </div>
-  
-  <div class="note">
-    This work uses AI tools for assistance. All lab experiments and decisions are human-led.
-  </div>
-  
-  <footer>
-    <div>© 2025 Richard Spicer</div>
-    <div class="motto">Vigilis in Machina</div>
-  </footer>
 
   <script>
     const getTheme = () => {
